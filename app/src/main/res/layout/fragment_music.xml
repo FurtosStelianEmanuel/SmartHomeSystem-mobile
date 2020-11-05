@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".musicFragment"
+    android:id="@+id/music_layout">
+
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="391dp"
+        android:layout_height="31dp" />
+
+    <SeekBar
+        android:id="@+id/sensitivitate"
+        android:layout_width="391dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="150dp"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="SNARE" />
+
+    <Button
+        android:id="@+id/hat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:text="HAT" />
+
+    <Button
+        android:id="@+id/kick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="30dp"
+        android:text="kick" />
+
+    <Button
+        android:id="@+id/general"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="100dp"
+        android:text="general" />
+
+</FrameLayout>

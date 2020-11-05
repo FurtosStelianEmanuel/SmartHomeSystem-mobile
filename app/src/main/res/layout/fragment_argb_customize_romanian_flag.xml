@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Argb_customizeRomanianFlagFragment">
+
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Animație steagul româniei"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+        <Button
+            android:id="@+id/argb_romanian_flag_viteza_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Viteză" />
+
+        <Button
+            android:id="@+id/argb_romanian_flag_nr_steaguri_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nr. steaguri" />
+
+        <Button
+            android:id="@+id/argb_romanian_flag_latime_steaguri_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lățime steaguri"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/argb_romanian_flag_directie_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Direcție" />
+
+        <Button
+            android:id="@+id/argb_romanian_flag_orientare_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Orientare" />
+
+        <Button
+            android:id="@+id/argb_romanian_flag_intensitate_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Intensitate" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <Button
+            android:id="@+id/connection_status"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/connect_off"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/asistent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="28dp"
+            android:clickable="true"
+            app:backgroundTint="#ffffff"
+            app:layout_constraintBottom_toTopOf="@+id/disconnect"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_mic_black_24dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/light_on_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="28dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="#ffffff"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toTopOf="@+id/light_off_fab"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/light_on" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/light_off_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/light_off" />
+
+        <com.flask.colorpicker.ColorPickerView
+            android:id="@+id/color_picker"
+            android:layout_width="303dp"
+            android:layout_height="475dp"
+            android:layout_marginTop="32dp"
+            app:alphaSlider="true"
+            app:density="12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/connection_status"
+            app:lightnessSlider="true"
+            app:lightnessSliderView="@+id/brightness"
+            app:wheelType="CIRCLE" />
+
+        <com.flask.colorpicker.slider.LightnessSlider
+            android:id="@+id/brightness"
+            android:layout_width="306dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/color_picker"
+            app:layout_constraintVertical_bias="0.055" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/disconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:clickable="true"
+
+            android:focusable="true"
+            app:backgroundTint="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/power_off" />
+
+        <ImageView
+            android:id="@+id/icon_asistent"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="96dp"
+            android:layout_marginLeft="96dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.037"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/asistent"
+            app:srcCompat="@drawable/ic_pepeicon" />
+
+        <TextView
+            android:id="@+id/continut_asistent"
+            android:layout_width="251dp"
+            android:layout_height="81dp"
+            android:layout_marginTop="12dp"
+            android:lines="5"
+            android:outlineAmbientShadowColor="@color/colorPrimaryDark"
+            android:visibility="invisible"
+            app:drawableTint="#525252"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon_asistent" />
+
+        <TextView
+            android:id="@+id/limba_asistent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:paddingTop="9dp"
+            android:textSize="17sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.108"
+            app:layout_constraintStart_toEndOf="@+id/icon_asistent"
+            app:layout_constraintTop_toTopOf="@+id/icon_asistent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        headerLayout="@layout/nav_header_main"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="218dp"
+                android:layout_height="76dp"
+
+                android:layout_marginTop="28dp"
+                android:contentDescription="TODO"
+                android:tint="#A4C639"
+                android:tooltipText="Versiune 0.01"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/main_foreground" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Smart Home System"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="108dp"
+                android:layout_height="18dp"
+                android:alpha="0.5"
+                android:text="by Furtos Stelian"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="@android:color/darker_gray"
+                android:backgroundTint="#A4C639"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.033"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <Button
+                android:id="@+id/bColor"
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:drawableLeft="@drawable/ic_color_lens_black_24dp"
+                android:padding="16dp"
+                android:text="Setari Color Picker"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/meniuButton"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/setari_usa"
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:drawableLeft="@drawable/door_event"
+                android:padding="16dp"
+                android:text="Setări Automatizare Ușă"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bColor" />
+
+            <Button
+                android:id="@+id/meniuButton"
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:drawableLeft="@drawable/ic_home_black_24dp"
+                android:padding="16dp"
+                android:text="Meniu Principal"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintVertical_bias="0.019" />
+
+            <Button
+                android:id="@+id/alarm_button"
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:drawableLeft="@drawable/ic_access_alarm_black_24dp"
+                android:padding="16dp"
+                android:text="Alarmă"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setari_usa" />
+
+            <Button
+                android:id="@+id/music_button"
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:drawableLeft="@drawable/ic_music_note_black_24dp"
+                android:padding="16dp"
+                android:text="Muzică"
+                android:textSize="12sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alarm_button" />
+
+            <Button
+                android:id="@+id/open_asistent"
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:drawableLeft="@drawable/ic_pepeicon"
+                android:padding="16dp"
+                android:text="Asistent"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alarm_button" />
+
+            <Button
+                android:id="@+id/open_pc"
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:drawableLeft="@drawable/ic_pc"
+                android:padding="16dp"
+                android:text="Control PC"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/open_asistent" />
+
+            <Button
+                android:id="@+id/open_argb"
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:drawableLeft="@drawable/ic_argb"
+                android:padding="16dp"
+                android:text="ARGB"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/open_pc" />
+
+            <Button
+                android:id="@+id/open_on_connect_automation"
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:drawableLeft="@drawable/icon_on_connect_automatizare"
+                android:padding="16dp"
+                android:text="AUTOMATIZARE ON CONNECT"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/open_argb" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

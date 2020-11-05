@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".doorEvents">
+
+    <Switch
+        android:id="@+id/aprindere_automata"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="316dp"
+        android:text="@string/aprindere_automata_led_uri"
+        android:textSize="@dimen/switch_text_size"
+        android:tooltipText="Led-urile se vor aprinde automat la o culoarea aleasa când ușa se deschide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/oprire_automata"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/switch_text_size"
+        android:text="@string/oprire_automata_led_uri"
+        android:tooltipText="Led-urile se vor stinge automat la închiderea ușii"
+        app:layout_constraintEnd_toEndOf="@+id/aprindere_automata"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/aprindere_automata"
+        app:layout_constraintTop_toBottomOf="@+id/aprindere_automata" />
+
+    <Switch
+        android:id="@+id/aplica_setari_startup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/aplic_set_rile_la_conectarea_cu_telefonul"
+        android:textSize="@dimen/switch_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oprire_automata" />
+
+    <Button
+        android:id="@+id/buton_culoare"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/background_light"
+        android:text="@string/culoarea_la_deschiderea_u_ii"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aplica_setari_startup" />
+
+    <Button
+        android:id="@+id/save_door_events"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Aplică setările"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buton_culoare" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="108dp"
+        android:layout_height="136dp"
+        android:src="@drawable/door_event"
+        app:layout_constraintBottom_toTopOf="@+id/aprindere_automata"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SmartHomeSystem</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="densitate">Densitate</string>
+    <string name="aprindere_automata_led_uri">Aprindere automată la deschiderea ușii</string>
+    <string name="oprire_automata_led_uri">Oprire automata la închiderea ușii</string>
+    <string name="tine_minte_set_rile_la_deconectarea_de_la_telefon">Ține minte setările la deconectare</string>
+    <string name="aplic_set_rile_la_conectarea_cu_telefonul">Aplică setările la conectarea cu telefonul</string>
+    <string name="culoarea_la_deschiderea_u_ii">Culoarea la deschiderea ușii</string>
+    <string name="todo">TODO</string>
+    <string name="culoarea_la_activarea_alarmei">Culoarea la activarea alarmei</string>
+    <string name="pepe_roman">Pepe broscoiul</string>
+    <string name="empty_search_bar">Scrie ceva in bara de cautare</string>
+    <string name="argb_tip_light_on">Tip\nExtindere centrală 1</string>
+
+</resources>

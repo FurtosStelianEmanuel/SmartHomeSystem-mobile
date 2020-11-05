@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentOnConnectAutomation">
+
+    <ImageView
+        android:id="@+id/icon2"
+        android:layout_width="108dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icon_on_connect_automatizare"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <Switch
+        android:id="@+id/reconectare_lumini_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aprinde luminile la reconectare"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon2"
+        app:layout_constraintVertical_bias="0.17000002" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="365dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="12dp"
+        android:text="Aprinde luminile doar în intervalul orar 22:00-23:59"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reconectare_lumini_switch" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="365dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="5dp"
+        android:text="Aprinde luminile doar daca am fost plecat mai mult de 20 de minute"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modifica_interval_orar" />
+
+    <Button
+        android:id="@+id/modifica_interval_orar"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:text="Modifică"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <Button
+        android:id="@+id/modifica_minute_plecate"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:text="Modifică"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

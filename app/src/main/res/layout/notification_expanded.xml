@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="256dp"
+    android:gravity="center_horizontal"
+
+
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smart Home System"
+        android:textColor="#aaee0000"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/asistoff_expanded"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00ffffff" />
+
+        <ImageButton
+            android:id="@+id/notification_light_off_expanded"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/light_off_1"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="19dp" />
+
+        <ImageButton
+            android:id="@+id/home_expanded"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_light"
+            android:backgroundTint="#FFA500"
+            android:scaleType="center" />
+
+        <ImageButton
+            android:id="@+id/notification_light_on_expanded"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="80dp"
+            android:alpha="1"
+
+            android:background="@drawable/light_on_1"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="19dp" />
+
+        <Button
+            android:id="@+id/asiston_expanded"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/asistentul_expanded"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_pepeicon"/>
+
+        <TextView
+            android:id="@+id/text_notificare_asistent"
+            android:layout_width="290dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+
+</LinearLayout>
