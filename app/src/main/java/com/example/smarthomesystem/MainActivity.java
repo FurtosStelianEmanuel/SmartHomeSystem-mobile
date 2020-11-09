@@ -1821,6 +1821,7 @@ public class MainActivity extends AppCompatActivity {
     void connectionLost() {
         //<editor-fold desc="body" defaultstate="collapsed">
         Log.println(Log.ASSERT, "Connection LOST", "  ");
+        onConnectionAutomationFragment.notifyConnectionLost();
         connected = false;
         Message message = handlerChangeBackground.obtainMessage(Message.CONTENTS_FILE_DESCRIPTOR, new Message());
         message.sendToTarget();
