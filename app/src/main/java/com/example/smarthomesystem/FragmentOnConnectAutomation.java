@@ -1,6 +1,7 @@
 package com.example.smarthomesystem;
 
 
+import android.app.AlertDialog;
 import android.app.TimePickerDialog;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -198,15 +200,15 @@ public class FragmentOnConnectAutomation extends Fragment {
      * Apelat cand UI-ul a fost actualizat sub vreo forma (switch,timepicker), actualizeaza si textul pentru textView-uri
      * Actualizeaza {@link #ON_CONNECT_AUTOMATION_SETTINGS} si apeleaza {@link MainActivity#saveOnConnectAutomationSettings()}
      */
-    public void onChange(Time startTime, Time stopTime,int timeout) {
+    public void onChange(Time startTime, Time stopTime, int timeout) {
         if (startTime != null) {
             ON_CONNECT_AUTOMATION_SETTINGS.oraStart = startTime;
         }
         if (stopTime != null) {
             ON_CONNECT_AUTOMATION_SETTINGS.oraStop = stopTime;
         }
-        if (timeout>=0){
-            ON_CONNECT_AUTOMATION_SETTINGS.timeout=timeout;
+        if (timeout >= 0) {
+            ON_CONNECT_AUTOMATION_SETTINGS.timeout = timeout;
         }
         ON_CONNECT_AUTOMATION_SETTINGS.enabled = enabledSwitch.isChecked();
         //inca pentru timeout nu este un UI
@@ -222,14 +224,14 @@ public class FragmentOnConnectAutomation extends Fragment {
         }
     }
 
-    public boolean shouldAutoLightOn()  {
+    public boolean shouldAutoLightOn() {
         try {
             return
                     ON_CONNECT_AUTOMATION_SETTINGS.enabled
                             && FragmentOnConnectAutomation.isBetweenHours(ON_CONNECT_AUTOMATION_SETTINGS.oraStart.toString(), ON_CONNECT_AUTOMATION_SETTINGS.oraStop.toString(), FragmentOnConnectAutomation.CURRENT_TIME())
                             && FragmentOnConnectAutomation.timeoutChecked(disconnectTime.toString(), FragmentOnConnectAutomation.CURRENT_TIME(), ON_CONNECT_AUTOMATION_SETTINGS.timeout);
         } catch (ParseException ex) {
-            Log.println(Log.ASSERT,"eroare",ex.toString());
+            Log.println(Log.ASSERT, "eroare", ex.toString());
             ex.printStackTrace();
             return false;
         }
@@ -248,6 +250,15 @@ public class FragmentOnConnectAutomation extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_fragment_on_connect_automation, container, false);
+
+        final NumberPickerDialog numberPickerDialog = new NumberPickerDialog();
+        numberPickerDialog.setValueChangeListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                onChange(null,null,newVal);
+            }
+        });
+
         intervalStartDialog = new TimePickerDialog(v.getContext(), AlarmFragment.getTimePickerDialogType(),
                 new TimePickerDialog.OnTimeSetListener() {
                     @Override
@@ -255,7 +266,7 @@ public class FragmentOnConnectAutomation extends Fragment {
                         Toast.makeText(view.getContext(), "Setează ora de final", Toast.LENGTH_SHORT).show();
                         intervalStopDialog.show();
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                            onChange(new Time(view.getHour(), view.getMinute()), null,-1);
+                            onChange(new Time(view.getHour(), view.getMinute()), null, -1);
                         }
                     }
                 },
@@ -265,7 +276,7 @@ public class FragmentOnConnectAutomation extends Fragment {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                            onChange(null, new Time(view.getHour(), view.getMinute()),-1);
+                            onChange(null, new Time(view.getHour(), view.getMinute()), -1);
                         }
                     }
                 },
@@ -280,7 +291,11 @@ public class FragmentOnConnectAutomation extends Fragment {
         v.findViewById(R.id.modifica_minute_plecate).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (getFragmentManager() != null) {
+                    numberPickerDialog.show(getFragmentManager(),"numberpicker");
+                }else{
+                    Log.println(Log.ASSERT,"eroare","afisare numberpicker");
+                }
             }
         });
 
@@ -291,7 +306,7 @@ public class FragmentOnConnectAutomation extends Fragment {
         enabledSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                onChange(null, null,-1);
+                onChange(null, null, -1);
             }
         });
 
