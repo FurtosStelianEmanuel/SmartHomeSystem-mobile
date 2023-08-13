@@ -2428,7 +2428,7 @@ public class MainActivity extends AppCompatActivity {
             Log.println(Log.ASSERT, "ERROR", "alerg deja");
             return;
         }
-        if (Integer.valueOf(limba.get(0)) == App.LIMBA_ENGLEZA) {
+        if (limba != null && Integer.valueOf(limba.get(0)) == App.LIMBA_ENGLEZA) {
             Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
             intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
             intent.putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true);
