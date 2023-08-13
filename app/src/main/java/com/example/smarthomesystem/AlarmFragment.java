@@ -93,9 +93,14 @@ public class AlarmFragment extends Fragment {
     ImageView imagine;
     AlertDialog.Builder builderSingle;
     ArrayAdapter<String> choices;
-    String[] choicesString = {"Random", "Iron Maiden - Blood brothers", "Pantera - Hollow", "Ozzy Osbourne - No more tears", "RAGE - Paint it black",
-            "Slayer - Raining blood", "Dmitri Shostakovich - Waltz No. 2", "Sepultura - Territory", "Dio - The last in line", "Judas Priest - Victim of changes",
-            "Queen - We are the champions"};
+    String[] choicesString = {
+            "Random",
+            "Baby I love your way",
+            "Ozzy Osbourne - No more tears",
+            "Dmitri Shostakovich - Waltz No. 2",
+            "Queen - We are the champions",
+            "HYBS - Would You Mind"
+    };
     //</editor-fold>
 
     public AlarmFragment() {
