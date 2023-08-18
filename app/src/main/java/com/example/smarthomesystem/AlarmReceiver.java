@@ -35,23 +35,20 @@ public class AlarmReceiver extends BroadcastReceiver {
     PendingIntent stopPendingIntent;
     SystemColor argbColor=new SystemColor(255,144,0);
     static String quotes[] = {
-            "Good fucking morning, goddamnit!",
-            "One day you may!",
-            "Get the fuck out of bed!",
             "The worst thing I can be is the same as everybody else.",
-            "Everybody wants to be a bodybuilder but don’t nobody want to lift heavy ass weights!",
-            "LIGHT WEIGHT BABY !",
-            "Being negative and lazy is a disease that leads to pain, hardships, depression, poor health and failure. Be proactive and give a damn to achieve success!",
             "Vision creates faith and faith creates willpower. With faith there is no anxiety and no doubt – just absolute confidence in yourself.",
             "Suffer the pain of discipline or suffer the pain of regret",
-            "E o zi fututa ca oricare alta",
             "Mens sana in corpore sano",
-            "Unde se termina visele, moartea respira, \n" +
-                    "Doar Luna si urletul de lup ma inspira, \n" +
-                    "Traieste-ti visul, daca n-ai curaj sa traiesti, \n" +
-                    "Ca un copil batran dependent de povesti. ",
-            "Cand cuvintele tac, asculta atent, \n" +
-                    "Pentru ca ura ramane cel mai sincer sentiment pana-n prezent... "
+            "Your life is just beginning. One day, the mountain that was in front of you will be so far behind you, it will barely be visible in the distance. But who you become in learning to climb it? That will stay with you forever. That is the point of the mountain.",
+            "If you’re willing to endure the discomfort of not knowing, a solution will often present itself",
+            "Don't stop believing, hold on to that feeling !",
+            "The overarching point is that what we think of as “distractions” aren’t the ultimate cause of our being distracted. They’re just the places we go to seek relief from the discomfort",
+            "Your experience of being alive consists of nothing other than the sum of everything to which you pay attention",
+            "what you pay attention to will define, for you, what reality is",
+            "Apart from anything else, they make it clear that the core challenge of managing our limited time isn’t about how to get everything done—that’s never going to happen—but how to decide most wisely what not to do, and how to feel at peace about not doing it.",
+            "Looking ahead to the future, I find myself equally constrained by my finitude: I’m being borne forward on the river of time, with no possibility of stepping out of the flow, onward toward my inevitable death—which, to make matters even more ticklish, could arrive at any moment",
+            "Every decision to use a portion of time on anything represents the sacrifice of all the other ways in which you could have spent that time, but didn’t—and to willingly make that sacrifice is to take a stand",
+            "What would it mean to spend the only time you ever get in a way that truly feels as though you are making it count?"
     };
     //</editor-fold>
 

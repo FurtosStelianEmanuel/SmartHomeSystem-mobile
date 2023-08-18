@@ -96,10 +96,20 @@ public class AlarmFragment extends Fragment {
     String[] choicesString = {
             "Random",
             "Baby I love your way",
-            "Ozzy Osbourne - No more tears",
-            "Dmitri Shostakovich - Waltz No. 2",
-            "Queen - We are the champions",
-            "HYBS - Would You Mind"
+            "Dancing with my phone",
+            "Hold on tight",
+            "Hotel california",
+            "i <3 u",
+            "I was made for loving you",
+            "Games people play",
+            "Me gustas tu",
+            "Ride",
+            "Save your tears",
+            "You shook me all night long",
+            "Three little birds",
+            "Tip toe",
+            "Epilog",
+            "Would you mind"
     };
     //</editor-fold>
 
